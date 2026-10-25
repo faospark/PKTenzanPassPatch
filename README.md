@@ -129,9 +129,17 @@ dotnet build -c Release
 
 ---
 
+## Community & Support
+
+Join the **Moogles & Mods** Discord community for updates, mod releases, technical support, and discussions:
+- **Discord**: [Moogles & Mods Discord](https://discord.gg/bSnpVBV)
+
+---
+
 ## Credits & Acknowledgments
 
 - **Pyriel**: Original creator of the definitive PS1 Suikoden II Tenzan Pass bugfix (`tenzan.asm`). His landmark reverse-engineering work originally uncovered the omitted Chimera party formations and established the elegant substitution of duplicate slots 1, 3, and 6 to restore Chimera's authentic ~30% spawn rate and Cyclone Rune drop.
 - **faospark**: Porting, IL2CPP in-memory byte-patching implementation (`MACHICON.EventInit`), battlefield position coordinate restoration, and Remaster engine safeguards.
+- **Moogles & Mods Discord Community**: For ongoing support, research, collaboration, and keeping the Suikoden modding scene thriving.
 - **Framework**: [BepInEx](https://github.com/BepInEx/BepInEx) & [HarmonyX](https://github.com/BepInEx/HarmonyX).
 - **Suikoden Community**: For keeping the history and spirit of Suikoden alive.
