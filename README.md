@@ -21,6 +21,7 @@ The HD Remaster ported the original encounter table without fixing this bug. **P
 - **Battle Grid & Array Protection**: Ensures complete 18-element battlefield position coordinate arrays and reinforces `monster_data` to prevent out-of-bounds exceptions.
 - **In-Memory Byte-Patching**: Direct memory modification on map transition (`va11`), completely eliminating the need for manual asset extraction or repacking.
 - **Force Chimera Encounter (Debug/Testing)**: Option to force all encounters in Tenzan Pass to Chimera formations for testing.
+- **Deep Technical Specification**: For complete bytecode analysis, encounter rates, and party formation tables, see [Documentation/tenzan_pass_chimera_va11.md](Documentation/tenzan_pass_chimera_va11.md).
 
 ---
 
