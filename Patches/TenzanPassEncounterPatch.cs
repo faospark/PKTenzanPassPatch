@@ -507,7 +507,6 @@ namespace PKTenzanPassPatch.Patches
                             }
                         }
                         __instance.battle_work.monster_data = bwExpanded;
-                        Plugin.Log.LogInfo("[TenzanPassEncounterPatch] Reinforced battle_work.monster_data to 4 slots in Postfix.");
                     }
 
                     var parties = battleData?.monster_party;
@@ -590,8 +589,6 @@ namespace PKTenzanPassPatch.Patches
 
                     var bw = __instance.battle_work;
 
-                    Plugin.Log.LogInfo($"[TenzanPassEncounterPatch] InitNewMonster Prefix: chara_no={chara_no}, monster_id={monster_id}, position={position}, mdLen={bw.monster_data?.Length}, posLen={bw.monster_position?.Length}");
-
                     // 1. Guard against monster_data array bounds (InitNewMonster checks battle_work.monster_data.Length <= monster_id)
                     bool needsMdExpand = false;
                     if (bw.monster_data == null)
@@ -659,15 +656,18 @@ namespace PKTenzanPassPatch.Patches
             {
                 try
                 {
+                    if (Plugin.Config == null || !Plugin.Config.EnableTenzanChimeraFix.Value)
+                        return;
+
+                    string currentMapId = CurrentMapId ?? "";
+                    var battleData = __instance?.battle_work?.battle_data ?? GSD2::OldSrcBase.sys_work?.battle_data;
+
+                    if (!IsTenzanPass(currentMapId, battleData))
+                        return;
+
                     if (monster_id == 3 || (_cachedChimera != null && __instance?.battle_work?.monster_data != null && monster_id < __instance.battle_work.monster_data.Length && __instance.battle_work.monster_data[monster_id] == _cachedChimera))
                     {
                         _battleHadChimera = true;
-                    }
-
-                    if (__instance?.battle_work?.b_chara != null && chara_no >= 0 && chara_no < __instance.battle_work.b_chara.Length)
-                    {
-                        var chara = __instance.battle_work.b_chara[chara_no];
-                        Plugin.Log.LogInfo($"[TenzanPassEncounterPatch] InitNewMonster Postfix: chara_no={chara_no} initialized -> {(chara != null ? "SUCCESS" : "NULL!")}");
                     }
                 }
                 catch (Exception ex)
