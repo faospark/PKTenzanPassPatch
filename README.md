@@ -1,4 +1,4 @@
-# P.K. - Tenzan Pass Patch
+﻿# P.K. - Tenzan Pass Patch
 
 A **BepInEx 6 (IL2CPP)** mod for **Suikoden I & II HD Remaster** (Steam) that restores the missing Chimera monster encounters and rare Cyclone Rune drops in Tenzan Pass (`va11`).
 
@@ -67,3 +67,9 @@ TenzanChimeraCycloneDropRate = 100
 - **Pyriel**: Original creator of the definitive PS1 Suikoden II Tenzan Pass bugfix (`tenzan.asm`). His landmark reverse-engineering work originally uncovered the omitted Chimera party formations and established the elegant substitution of duplicate slots 1, 3, and 6 to restore Chimera's authentic ~30% spawn rate and Cyclone Rune drop.
 - **Moogles & Mods Discord Community**: For ongoing support, research, collaboration, and keeping the Suikoden modding scene thriving. Join us on the [Moogles & Mods Discord](https://discord.com/invite/bSnpVBV).
 - **Framework**: [BepInEx](https://github.com/BepInEx/BepInEx) & [HarmonyX](https://github.com/BepInEx/HarmonyX).
+
+---
+
+## License
+
+Distributed under the [MIT License](LICENSE).
