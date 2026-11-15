@@ -1,4 +1,4 @@
-﻿# P.K. - Tenzan Pass Patch
+# P.K. - Tenzan Pass Patch
 
 **By [faospark](https://github.com/faospark)**
 
